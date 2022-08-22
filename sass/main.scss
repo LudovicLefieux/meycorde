@@ -1,0 +1,32 @@
+/*
+Theme Name: MeyCorde
+Theme URI: 
+Author: Ludovic Lefieux
+Author URI: https://ludovic-lefieux.fr/
+Description: Theme du site e-commerce MeyCorde
+Requires at least: WordPress 5.0
+Version: 1.0
+*/
+
+/*------ UTILS ------*/
+@import "./utils/variables";
+@import "./utils/functions";
+@import "./utils/mixins";
+@import "./utils/placeholders";
+
+/*------ VENDORS ------*/
+@import "./vendors/normalize";
+
+/*------ BASE ------*/
+@import "./base/typography";
+@import "./base/base";
+
+/*------ COMPONENTS ------*/
+
+/*------ LAYOUT ------*/
+@import "./layout/header";
+@import "./layout/footer";
+
+/*------ PAGES ------*/
+
+/*------ THEMES ------*/
