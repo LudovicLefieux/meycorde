@@ -13,6 +13,7 @@ Version: 1.0
 @import "./utils/functions";
 @import "./utils/mixins";
 @import "./utils/placeholders";
+@import "./utils/animations";
 
 /*------ VENDORS ------*/
 @import "./vendors/normalize";
@@ -22,8 +23,14 @@ Version: 1.0
 @import "./base/base";
 
 /*------ COMPONENTS ------*/
+@import "./components/button";
+@import "./components/submenu";
+@import "./components/searchbar";
+@import "./components/cart";
+@import "./components/mobile-nav";
 
 /*------ LAYOUT ------*/
+@import "./layout/cache";
 @import "./layout/header";
 @import "./layout/footer";
 

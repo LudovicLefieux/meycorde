@@ -1,0 +1,19 @@
+.header {
+  position: fixed;
+  top: 46px;
+  left: 0;
+  z-index: 3;
+  display: flex;
+  justify-content: flex-end;
+  padding: 24px 16px;
+  border-bottom: solid 1px $grey;
+  background: $white;
+
+  .logo {
+    font-family: "Pacifico", cursive;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
