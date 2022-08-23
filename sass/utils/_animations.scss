@@ -1,0 +1,28 @@
+@keyframes animateTop {
+  from {
+    top: 0;
+    opacity: 0;
+  }
+  to {
+    top: 72;
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes heightIn {
+  from {
+    max-height: 0;
+  }
+  to {
+    max-height: auto;
+  }
+}
