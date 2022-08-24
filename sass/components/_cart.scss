@@ -1,12 +1,11 @@
 .cart {
-  position: absolute;
-  top: 72px;
-  left: 0;
   background: $white;
   padding: 16px;
   width: 100%;
   border-bottom: solid 1px $grey;
-  display: flex;
+  border-left: solid 1px $grey;
+  border-right: solid 1px $grey;
+  display: none;
   flex-direction: column;
   align-items: center;
   animation-name: animateTop;
@@ -28,9 +27,9 @@
     text-transform: none;
     letter-spacing: normal;
     width: 100%;
-  }
-}
 
-.cart.hidden {
-  display: none;
+    @media (min-width: 600px) {
+      width: auto;
+    }
+  }
 }
