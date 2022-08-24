@@ -6,15 +6,13 @@
   padding: 0;
   font-weight: 600;
   text-transform: uppercase;
-  animation-name: animateTop;
-  animation-duration: 0.4s;
 
   ul {
     width: 100%;
   }
 
-  &__item {
-    &--complex {
+  .menu-item {
+    .menu-item-has-children {
       a {
         justify-content: space-between;
         align-items: center;
@@ -56,12 +54,12 @@
     }
   }
 
-  &__submenu {
+  .sub-menu {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.4s ease;
 
-    &__item {
+    .menu-item {
       text-transform: none;
 
       a {
@@ -81,13 +79,19 @@
     display: none;
     overflow: hidden;
 
-    &__item {
+    .menu-item {
       padding: 0 8px;
       letter-spacing: 2px;
 
       @media (min-width: 1200px) {
         padding: 0 16px;
       }
+    }
+
+    // Supprime les onglets "Mon compte" et "Favoris" en version desktop
+    #menu-item-21,
+    #menu-item-30 {
+      display: none;
     }
 
     @media (min-width: 900px) {

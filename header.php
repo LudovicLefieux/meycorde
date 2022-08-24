@@ -21,14 +21,14 @@
 
             <div class="menus">
 
-                <nav class="main-menu main-menu--desktop">
-                    <ul>
-                        <li class="main-menu--desktop__item"><a href="#">Accueil</a></li>
-                        <li class="main-menu--desktop__item"><a href="#">Catalogue</a></li>
-                        <li class="main-menu--desktop__item"><a href="#">Personnalisation</a></li>
-                        <li class="main-menu--desktop__item"><a href="#">Contact</a></li>
-                    </ul>
-                </nav>
+                <?php wp_nav_menu(
+                    array(
+                        'theme_location' => 'main',
+                        'container' => 'nav',
+                        'container_class' => 'main-menu main-menu--desktop',
+                        'menu_class' => '',
+                    )
+                ); ?>
 
                 <div class="user-navigation">
 
@@ -102,7 +102,16 @@
                         </svg>
                     </a>
 
-                    <nav class="main-menu panel">
+                    <?php wp_nav_menu(
+                        array(
+                            'theme_location' => 'main',
+                            'container' => 'nav',
+                            'container_class' => 'main-menu panel',
+                            'menu_class' => '',
+                        )
+                    ); ?>
+
+                    <!--<nav class="main-menu panel">
                         <ul>
                             <li class="main-menu__item">
                                 <a href="/">
@@ -148,7 +157,7 @@
                                 </a>
                             </li>
                         </ul>
-                    </nav>
+                    </nav>-->
 
                     <a href="#" class="account">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -156,7 +165,16 @@
                         </svg>
                         <span>Mon compte</span>
                     </a>
-                    <ul class="account-submenu panel">
+
+                    <?php wp_nav_menu(
+                        array(
+                            'theme_location' => 'account',
+                            'container' => 'ul',
+                            'menu_class' => 'account-submenu panel',
+                        )
+                    ); ?>
+
+                    <!--<ul class="account-submenu panel">
                         <li class="account-submenu__item">
                             <a href="#">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -173,7 +191,7 @@
                                 <span>Mes informations</span>
                             </a>
                         </li>
-                    </ul>
+                    </ul>-->
 
                     <nav class="tabbar">
                         <ul>

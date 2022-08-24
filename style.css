@@ -493,9 +493,12 @@ h1 {
   top: 72px;
   left: 0;
   z-index: 2;
+  max-height: 0;
+  overflow: hidden;
 }
 .user-navigation .panel.js-active {
   display: flex;
+  transition: max-height 0.4s ease;
 }
 @media (min-width: 600px) {
   .user-navigation .panel {
@@ -532,21 +535,19 @@ h1 {
   background: #efefef;
   border-left: solid 1px #dadada;
   border-right: solid 1px #dadada;
-  animation-name: animateTop;
-  animation-duration: 0.4s;
 }
 .user-navigation .account-submenu.js-active {
   display: block;
 }
-.user-navigation .account-submenu__item {
+.user-navigation .account-submenu .menu-item {
   border-bottom: solid 1px #dadada;
 }
-.user-navigation .account-submenu__item a {
+.user-navigation .account-submenu .menu-item a {
   padding: 16px;
   display: flex;
   align-items: center;
 }
-.user-navigation .account-submenu__item a span {
+.user-navigation .account-submenu .menu-item a span {
   margin-left: 8px;
 }
 @media (max-width: 900px) {
@@ -571,8 +572,6 @@ h1 {
   border-bottom: solid 1px #dadada;
   border-left: solid 1px #dadada;
   border-right: solid 1px #dadada;
-  animation-name: animateTop;
-  animation-duration: 0.4s;
 }
 .searchbar__input {
   display: flex;
@@ -600,10 +599,13 @@ h1 {
     left: auto;
     right: 180px;
     max-width: 500px;
-    height: 89px;
+    max-height: 0;
     padding: 24px 16px;
     transform-origin: center right;
     animation: widthIn 0.4s ease;
+  }
+  .searchbar.panel.js-active {
+    max-height: 89px;
   }
 }
 @media (min-width: 1200px) {
@@ -619,11 +621,8 @@ h1 {
   border-bottom: solid 1px #dadada;
   border-left: solid 1px #dadada;
   border-right: solid 1px #dadada;
-  display: none;
   flex-direction: column;
   align-items: center;
-  animation-name: animateTop;
-  animation-duration: 0.4s;
 }
 .cart__illustration {
   min-height: 100px;
@@ -654,67 +653,65 @@ h1 {
   padding: 0;
   font-weight: 600;
   text-transform: uppercase;
-  animation-name: animateTop;
-  animation-duration: 0.4s;
 }
 .main-menu ul {
   width: 100%;
 }
-.main-menu__item--complex a {
+.main-menu .menu-item .menu-item-has-children a {
   justify-content: space-between;
   align-items: center;
 }
 @media (min-width: 900px) {
-  .main-menu__item--complex a {
+  .main-menu .menu-item .menu-item-has-children a {
     justify-content: baseline;
     align-items: baseline;
   }
 }
-.main-menu__item--complex a .plus {
+.main-menu .menu-item .menu-item-has-children a .plus {
   font-size: 1.5rem;
   line-height: 0.8;
   color: #727272;
 }
 @media (min-width: 900px) {
-  .main-menu__item--complex a .plus {
+  .main-menu .menu-item .menu-item-has-children a .plus {
     display: none;
   }
 }
 @media (min-width: 900px) {
-  .main-menu__item--complex {
+  .main-menu .menu-item .menu-item-has-children {
     position: relative;
   }
 }
-.main-menu__item a {
+.main-menu .menu-item a {
   display: flex;
   padding: 16px;
   border-bottom: solid 1px #dadada;
 }
 @media (min-width: 600px) {
-  .main-menu__item a {
+  .main-menu .menu-item a {
     padding: 16px 24px;
   }
 }
 @media (min-width: 900px) {
-  .main-menu__item a {
+  .main-menu .menu-item a {
     padding: 0 8px;
     border: none;
   }
 }
-.main-menu__submenu {
+.main-menu .sub-menu {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.4s ease;
 }
-.main-menu__submenu__item {
+.main-menu .sub-menu .menu-item {
   text-transform: none;
 }
-.main-menu__submenu__item a {
+.main-menu .sub-menu .menu-item a {
   padding-left: 32px;
   animation: heightIn 0.4s ease;
 }
 @media (min-width: 900px) {
-  .main-menu__submenu {
+  .main-menu .sub-menu {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -724,14 +721,18 @@ h1 {
   display: none;
   overflow: hidden;
 }
-.main-menu--desktop__item {
+.main-menu--desktop .menu-item {
   padding: 0 8px;
   letter-spacing: 2px;
 }
 @media (min-width: 1200px) {
-  .main-menu--desktop__item {
+  .main-menu--desktop .menu-item {
     padding: 0 16px;
   }
+}
+.main-menu--desktop #menu-item-21,
+.main-menu--desktop #menu-item-30 {
+  display: none;
 }
 @media (min-width: 900px) {
   .main-menu--desktop {
