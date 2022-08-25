@@ -117,6 +117,29 @@ function toggleUserNavPanels(item) {
   }
 }
 
+// Hero Slider
+
+const slides = document.getElementsByClassName("slider__img");
+const controls = document.querySelectorAll(".prev, .next");
+let slideIndex = 1;
+
+for (const element of controls) {
+  element.addEventListener("click", () => {
+    if (element.classList.contains("next")) {
+      slideIndex += 1;
+    } else {
+      slideIndex += -1;
+    }
+
+    for (const slide of slides) {
+      if (slideIndex > slides.length) {
+        slideIndex = 1;
+      } else if (slideIndex < 1) {
+        slideIndex = slides.length;
+      }
+    }
+  });
+}
 /*---------- TOGGLE PANELS OF USER NAV -----------*/
 
 const userNavItems = document.querySelectorAll(".user-navigation > a");

@@ -48,5 +48,18 @@ a .js-active {
 }
 
 h1 {
-  margin-top: 104px;
+  font-size: 1.5rem;
+  margin-top: 0;
+
+  @media (min-width: 900px) {
+    font-size: 2rem;
+  }
+}
+
+p {
+  margin-top: 0;
+
+  @media (min-width: 900px) {
+    font-size: 1.25rem;
+  }
 }

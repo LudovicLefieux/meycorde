@@ -10,10 +10,22 @@
     display: block;
     width: 100%;
     padding: 8px 16px;
+
+    @media (min-width: 900px) {
+      padding: 16px 32px;
+    }
   }
 
   &--dark {
     border-color: $black;
     color: $black;
+  }
+
+  &--large {
+    width: 100%;
+  }
+
+  @media (min-width: 900px) {
+    font-size: 1.25rem;
   }
 }
