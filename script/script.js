@@ -13,7 +13,7 @@ function toggleButton(button, icon, closeIcon) {
 
 // Fait apparaître un sous-menu lorsqu'on clique sur un élément de menu complexe
 function displayAccordionMenu(item) {
-  this.classList.toggle("js-active");
+  item.classList.toggle("js-active");
 
   // Change le "+" en "-" et inversement
   /*const plus = this.getElementsByClassName("plus")[0];
@@ -58,10 +58,18 @@ function toggleUserNavPanels(item) {
     panel.classList.add("js-active");
 
     // Animation de dropdown
-    if (panel.style.maxHeight) {
-      panel.style.maxHeight = null;
+    if (!panel.classList.contains("main-menu")) {
+      if (panel.style.maxHeight) {
+        panel.style.maxHeight = null;
+      } else {
+        panel.style.maxHeight = panel.scrollHeight + "px";
+      }
     } else {
-      panel.style.maxHeight = panel.scrollHeight + "px";
+      if (panel.style.maxHeight) {
+        panel.style.maxHeight = null;
+      } else {
+        panel.style.maxHeight = 100 + "%";
+      }
     }
 
     // Bloque le scroll pendant que le panel est ouvert
@@ -96,10 +104,11 @@ function toggleUserNavPanels(item) {
       };*/
 
       window.onclick = function (event) {
-        if (event.target != darkOverlay) {
+        if (event.target == darkOverlay) {
           for (const element of activeElements) {
             element.classList.remove("js-active");
           }
+          panel.style.maxHeight = null;
           darkOverlay.classList.remove("js-active");
           body.style.overflow = "auto";
         }
