@@ -24,13 +24,14 @@ Version: 1.0
 
 /*------ COMPONENTS ------*/
 @import "./components/button";
-@import "./components/submenu";
+@import "./components/tabbar";
+@import "./components/user-navigation";
 @import "./components/searchbar";
 @import "./components/cart";
-@import "./components/mobile-nav";
+@import "./components/main-menu";
 
 /*------ LAYOUT ------*/
-@import "./layout/cache";
+@import "./layout/dark-overlay";
 @import "./layout/header";
 @import "./layout/footer";
 

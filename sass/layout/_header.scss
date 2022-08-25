@@ -3,17 +3,45 @@
   top: 46px;
   left: 0;
   z-index: 3;
-  display: flex;
-  justify-content: flex-end;
-  padding: 24px 16px;
   border-bottom: solid 1px $grey;
   background: $white;
+  display: flex;
+  justify-content: center;
 
-  .logo {
-    font-family: "Pacifico", cursive;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  .container {
+    padding: 24px 16px;
+    justify-content: flex-end;
+
+    .logo {
+      font-family: "Pacifico", cursive;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      @media (min-width: 600px) {
+        position: relative;
+        top: auto;
+        left: auto;
+        transform: none;
+        font-size: 24px;
+      }
+    }
+
+    .menus {
+      display: flex;
+      align-items: center;
+    }
+
+    @media (min-width: 600px) {
+      justify-content: space-between;
+      padding: 30px 24px;
+    }
   }
+
+  // À enlever quand admin non connecté
+  @media (min-width: 780px) {
+    top: 32px;
+  }
+  /*--------------------*/
 }

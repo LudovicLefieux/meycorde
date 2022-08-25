@@ -10,13 +10,24 @@ body {
 
   > * {
     width: 100%;
-    padding: 0 16px;
+
+    .container {
+      padding: 0 16px;
+      position: relative;
+      width: 100%;
+      max-width: 1200px;
+      display: flex;
+    }
   }
 }
 
 a {
   text-decoration: none;
   color: inherit;
+
+  &:hover {
+    color: $interactive;
+  }
 }
 
 ul {
@@ -28,11 +39,11 @@ nav ul {
   padding: 0;
 }
 
-.hidden {
-  display: none;
+.js-active {
+  display: block;
 }
 
-.active {
+a .js-active {
   color: $interactive;
 }
 
