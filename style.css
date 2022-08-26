@@ -448,6 +448,11 @@ p {
   text-transform: uppercase;
   letter-spacing: 4px;
   background: none;
+  transition: all 0.2s ease;
+}
+.button:hover {
+  background-color: #efefef;
+  color: #0aac8c;
 }
 .button a {
   display: block;
@@ -462,6 +467,13 @@ p {
 .button--dark {
   border-color: #1e1e1e;
   color: #1e1e1e;
+}
+.button--dark:hover {
+  background-color: #1e1e1e;
+  color: #efefef;
+}
+.button--dark:hover a {
+  color: inherit;
 }
 .button--large {
   width: 100%;
@@ -1041,6 +1053,56 @@ p {
   }
 }
 
+.left-right__img-container {
+  position: relative;
+  padding-top: 56.25%;
+  background: rgba(0, 0, 0, 0.25);
+}
+@media (min-width: 900px) {
+  .left-right__img-container {
+    min-width: 60%;
+    padding: 0;
+  }
+}
+.left-right__content {
+  padding: 24px 16px;
+  background: linear-gradient(180deg, #2193b0 0%, #16a085 100%);
+  color: #efefef;
+}
+.left-right__content .button {
+  width: 100%;
+  margin-top: 24px;
+}
+@media (min-width: 900px) {
+  .left-right__content .button {
+    width: auto;
+  }
+}
+@media (min-width: 600px) {
+  .left-right__content {
+    padding: 24px;
+  }
+}
+@media (min-width: 900px) {
+  .left-right__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: baseline;
+  }
+}
+@media (min-width: 1600px) {
+  .left-right__content {
+    padding: 48px;
+  }
+}
+@media (min-width: 900px) {
+  .left-right {
+    display: flex;
+    min-height: 500px;
+  }
+}
+
 /*------ PAGES ------*/
 .hero {
   margin-top: 72px;
@@ -1127,43 +1189,9 @@ p {
     padding: 0;
   }
 }
-.hero .content {
-  padding: 24px 16px;
-  background: linear-gradient(180deg, #2193b0 0%, #16a085 100%);
-  color: #efefef;
-}
-.hero .content .button {
-  width: 100%;
-  margin-top: 24px;
-}
-@media (min-width: 900px) {
-  .hero .content .button {
-    width: auto;
-  }
-}
-@media (min-width: 600px) {
-  .hero .content {
-    padding: 24px;
-  }
-}
-@media (min-width: 900px) {
-  .hero .content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: baseline;
-  }
-}
-@media (min-width: 1600px) {
-  .hero .content {
-    padding: 24px 10% 24px 24px;
-  }
-}
 @media (min-width: 900px) {
   .hero {
     margin-top: 89px;
-    display: flex;
-    min-height: 500px;
   }
 }
 
@@ -1204,6 +1232,12 @@ p {
   display: grid;
   grid-template-columns: auto auto;
   gap: 16px;
+}
+
+@media (min-width: 900px) {
+  .custom {
+    flex-direction: row-reverse;
+  }
 }
 
 /*------ THEMES ------*/

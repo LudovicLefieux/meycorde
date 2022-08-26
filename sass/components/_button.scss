@@ -5,6 +5,12 @@
   text-transform: uppercase;
   letter-spacing: 4px;
   background: none;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background-color: $white;
+    color: $interactive;
+  }
 
   a {
     display: block;
@@ -19,6 +25,15 @@
   &--dark {
     border-color: $black;
     color: $black;
+
+    &:hover {
+      background-color: $black;
+      color: $white;
+
+      a {
+        color: inherit;
+      }
+    }
   }
 
   &--large {

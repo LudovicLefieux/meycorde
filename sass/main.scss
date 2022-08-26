@@ -36,11 +36,13 @@ Version: 1.0
 /*------ LAYOUT ------*/
 @import "./layout/dark-overlay";
 @import "./layout/header";
+@import "./layout/left-right";
 @import "./layout/footer";
 
 /*------ PAGES ------*/
 @import "./pages/hero";
 @import "./pages/last-products";
 @import "./pages/home-categories";
+@import "./pages/custom";
 
 /*------ THEMES ------*/

@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<div class="hero">
+<div class="hero left-right">
     <div class="slider-container">
         <div class="slider">
             <div class="slider__img" style="background-color: red;">
@@ -26,7 +26,7 @@
             <span class="dot"></span>
         </div>
     </div>
-    <div class="content">
+    <div class="left-right__content">
         <h1>Faîtes-vous plaisir parmis une large sélection de bracelets paracorde</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut nibh quis velit ullamcorper congue quis id justo.</p>
         <button class="button">
@@ -163,6 +163,19 @@
                 </a>
             </div>
         </div>
+    </div>
+</section>
+
+<section class="custom left-right">
+    <div class="left-right__img-container"></div>
+    <div class="left-right__content">
+        <h2>Personnalisez votre bracelet de A à Z</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut nibh quis velit ullamcorper congue quis id justo.</p>
+        <button class="button">
+            <a href="/personnalisation">
+                Créer
+            </a>
+        </button>
     </div>
 </section>
 
