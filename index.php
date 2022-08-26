@@ -27,13 +27,21 @@
         </div>
     </div>
     <div class="left-right__content">
-        <h1>Faîtes-vous plaisir parmis une large sélection de bracelets paracorde</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut nibh quis velit ullamcorper congue quis id justo.</p>
-        <button class="button">
-            <a href="/catalogue">
-                Découvrir
-            </a>
-        </button>
+        <?php $args = array('post_type' => 'page', 'pagename' => 'hero');
+        $posts = get_posts($args);
+
+        if(count($posts) > 0):
+            $post = $posts[0];
+            setup_postdata($post); ?>
+
+            <h1><?php the_title(); ?></h1>
+            <?php the_content(); ?>
+            <button class="button">
+                <a href="/catalogue">
+                    Découvrir
+                </a>
+            </button>
+        <?php endif; wp_reset_postdata(); ?>
     </div>
 </div>
 
@@ -169,13 +177,23 @@
 <section class="custom left-right">
     <div class="left-right__img-container"></div>
     <div class="left-right__content">
-        <h2>Personnalisez votre bracelet de A à Z</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut nibh quis velit ullamcorper congue quis id justo.</p>
-        <button class="button">
-            <a href="/personnalisation">
-                Créer
-            </a>
-        </button>
+
+        <?php $args = array('post_type' => 'page', 'pagename' => 'custom-paragraph');
+        $posts = get_posts($args);
+
+        if(count($posts) > 0):
+            $post = $posts[0];
+            setup_postdata($post); ?>
+
+            <h2><?php the_title(); ?></h2>
+            <?php the_content(); ?>
+            <button class="button">
+                <a href="/personnalisation">
+                    Créer
+                </a>
+            </button>
+        <?php endif; wp_reset_postdata(); ?>
+
     </div>
 </section>
 
