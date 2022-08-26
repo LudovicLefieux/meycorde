@@ -24,6 +24,8 @@ Version: 1.0
 
 /*------ COMPONENTS ------*/
 @import "./components/button";
+@import "./components/category-card";
+@import "./components/seemore-card";
 @import "./components/product_card";
 @import "./components/tabbar";
 @import "./components/user-navigation";
@@ -39,5 +41,6 @@ Version: 1.0
 /*------ PAGES ------*/
 @import "./pages/hero";
 @import "./pages/last-products";
+@import "./pages/home-categories";
 
 /*------ THEMES ------*/
