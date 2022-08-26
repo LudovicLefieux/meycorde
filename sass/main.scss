@@ -24,6 +24,9 @@ Version: 1.0
 
 /*------ COMPONENTS ------*/
 @import "./components/button";
+@import "./components/category-card";
+@import "./components/seemore-card";
+@import "./components/product_card";
 @import "./components/tabbar";
 @import "./components/user-navigation";
 @import "./components/searchbar";
@@ -33,9 +36,13 @@ Version: 1.0
 /*------ LAYOUT ------*/
 @import "./layout/dark-overlay";
 @import "./layout/header";
+@import "./layout/left-right";
 @import "./layout/footer";
 
 /*------ PAGES ------*/
 @import "./pages/hero";
+@import "./pages/last-products";
+@import "./pages/home-categories";
+@import "./pages/custom";
 
 /*------ THEMES ------*/

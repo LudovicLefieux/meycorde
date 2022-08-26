@@ -1,0 +1,50 @@
+.category-card {
+  background: white;
+  max-height: 250px;
+
+  @media (min-width: 480px) {
+    min-height: 216px;
+  }
+
+  @media (min-width: 600px) {
+    min-height: 250px;
+  }
+
+  a {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  &__img-container {
+    position: relative;
+    width: 100%;
+    padding-top: 100%;
+
+    @media (min-width: 480px) {
+      padding: 0;
+      height: 100%;
+    }
+  }
+
+  &__content {
+    text-align: center;
+    padding: 8px;
+
+    @media (min-width: 900px) {
+      padding: 16px;
+    }
+  }
+
+  &__title {
+    font-weight: bold;
+
+    @media (min-width: 600px) {
+      font-size: 1.3rem;
+    }
+
+    @media (min-width: 900px) {
+      font-size: 1.5rem;
+    }
+  }
+}

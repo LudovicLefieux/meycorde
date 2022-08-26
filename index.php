@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<div class="hero">
+<div class="hero left-right">
     <div class="slider-container">
         <div class="slider">
             <div class="slider__img" style="background-color: red;">
@@ -26,7 +26,7 @@
             <span class="dot"></span>
         </div>
     </div>
-    <div class="content">
+    <div class="left-right__content">
         <h1>Faîtes-vous plaisir parmis une large sélection de bracelets paracorde</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut nibh quis velit ullamcorper congue quis id justo.</p>
         <button class="button">
@@ -36,5 +36,147 @@
         </button>
     </div>
 </div>
+
+<section class="last-products">
+    <div class="container">
+        <h2>Les nouveautés</h2>
+        <ul>
+            <li class="last-product__item product-card">
+                <a href="#">
+                    <div class="product-card__img-container">
+
+                    </div>
+                    <div class="product-card__content">
+                        <div>
+                            <p class="product-card__content__title">Paracord OD</p>
+                            <p class="product-card__content__description">Bracelet de survie</p>
+                        </div>
+                        <div>
+                            <p class="product-card__content__price">7.50€</p>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li class="last-product__item product-card">
+                <a href="#">
+                    <div class="product-card__img-container">
+
+                    </div>
+                    <div class="product-card__content">
+                        <div>
+                            <p class="product-card__content__title">Paracord OD</p>
+                            <p class="product-card__content__description">Bracelet de survie</p>
+                        </div>
+                        <div>
+                            <p class="product-card__content__price">7.50€</p>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li class="last-product__item product-card">
+                <a href="#">
+                    <div class="product-card__img-container">
+
+                    </div>
+                    <div class="product-card__content">
+                        <div>
+                            <p class="product-card__content__title">Paracord OD</p>
+                            <p class="product-card__content__description">Bracelet de survie</p>
+                        </div>
+                        <div>
+                            <p class="product-card__content__price">7.50€</p>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li class="last-product__item product-card">
+                <a href="#">
+                    <div class="product-card__img-container">
+
+                    </div>
+                    <div class="product-card__content">
+                        <div>
+                            <p class="product-card__content__title">Paracord OD</p>
+                            <p class="product-card__content__description">Bracelet de survie</p>
+                        </div>
+                        <div>
+                            <p class="product-card__content__price">7.50€</p>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li class="last-product__item product-card">
+                <a href="#">
+                    <div class="product-card__img-container">
+
+                    </div>
+                    <div class="product-card__content">
+                        <div>
+                            <p class="product-card__content__title">Paracord OD</p>
+                            <p class="product-card__content__description">Bracelet de survie</p>
+                        </div>
+                        <div>
+                            <p class="product-card__content__price">7.50€</p>
+                        </div>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<section class="home-categories">
+    <div class="container">
+        <h2>Vous choisissez</h2>
+        <div class="home-categories__grid">
+            <div class="category-card">
+                <a href="#">
+                    <div class="category-card__img-container">
+                </div>
+                <div class="category-card__content">
+                    <span class="category-card__title">Bracelets</span>
+                </div>
+                </a>            
+            </div>
+            <div class="category-card">
+                <a href="#">
+                    <div class="category-card__img-container">
+                </div>
+                <div class="category-card__content">
+                    <span class="category-card__title">Bracelets</span>
+                </div>
+                </a>            
+            </div>
+            <div class="category-card">
+                <a href="#">
+                    <div class="category-card__img-container">
+                </div>
+                <div class="category-card__content">
+                    <span class="category-card__title">Bracelets</span>
+                </div>
+                </a>            
+            </div>
+            <div class="seemore-card">
+                <a href="#">
+                    <span>Voir plus</span>
+                    <span>+</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="custom left-right">
+    <div class="left-right__img-container"></div>
+    <div class="left-right__content">
+        <h2>Personnalisez votre bracelet de A à Z</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut nibh quis velit ullamcorper congue quis id justo.</p>
+        <button class="button">
+            <a href="/personnalisation">
+                Créer
+            </a>
+        </button>
+    </div>
+</section>
 
 <?php get_footer(); ?>
