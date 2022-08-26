@@ -37,4 +37,82 @@
     </div>
 </div>
 
+<section class="last-products">
+    <div class="container">
+        <h2>Les nouveautés</h2>
+        <ul>
+            <li class="last-product__item product-card">
+                <div class="product-card__img-container">
+
+                </div>
+                <div class="product-card__content">
+                    <div>
+                        <p class="product-card__content__title">Paracord OD</p>
+                        <p class="product-card__content__description">Bracelet de survie</p>
+                    </div>
+                    <div>
+                        <p class="product-card__content__price">7.50€</p>
+                    </div>
+                </div>
+            </li>
+            <li class="last-product__item product-card">
+                <div class="product-card__img-container">
+
+                </div>
+                <div class="product-card__content">
+                    <div>
+                        <p class="product-card__content__title">Paracord OD</p>
+                        <p class="product-card__content__description">Bracelet de survie</p>
+                    </div>
+                    <div>
+                        <p class="product-card__content__price">7.50€</p>
+                    </div>
+                </div>
+            </li>
+            <li class="last-product__item product-card">
+                <div class="product-card__img-container">
+
+                </div>
+                <div class="product-card__content">
+                    <div>
+                        <p class="product-card__content__title">Paracord OD</p>
+                        <p class="product-card__content__description">Bracelet de survie</p>
+                    </div>
+                    <div>
+                        <p class="product-card__content__price">7.50€</p>
+                    </div>
+                </div>
+            </li>
+            <li class="last-product__item product-card">
+                <div class="product-card__img-container">
+
+                </div>
+                <div class="product-card__content">
+                    <div>
+                        <p class="product-card__content__title">Paracord OD</p>
+                        <p class="product-card__content__description">Bracelet de survie</p>
+                    </div>
+                    <div>
+                        <p class="product-card__content__price">7.50€</p>
+                    </div>
+                </div>
+            </li>
+            <li class="last-product__item product-card">
+                <div class="product-card__img-container">
+
+                </div>
+                <div class="product-card__content">
+                    <div>
+                        <p class="product-card__content__title">Paracord OD</p>
+                        <p class="product-card__content__description">Bracelet de survie</p>
+                    </div>
+                    <div>
+                        <p class="product-card__content__price">7.50€</p>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</section>
+
 <?php get_footer(); ?>

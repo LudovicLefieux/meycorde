@@ -24,6 +24,7 @@ Version: 1.0
 
 /*------ COMPONENTS ------*/
 @import "./components/button";
+@import "./components/product_card";
 @import "./components/tabbar";
 @import "./components/user-navigation";
 @import "./components/searchbar";
@@ -37,5 +38,6 @@ Version: 1.0
 
 /*------ PAGES ------*/
 @import "./pages/hero";
+@import "./pages/last-products";
 
 /*------ THEMES ------*/

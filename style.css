@@ -389,6 +389,8 @@ a:hover {
 
 ul {
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 nav ul {
@@ -410,6 +412,15 @@ h1 {
 }
 @media (min-width: 900px) {
   h1 {
+    font-size: 2.25rem;
+  }
+}
+
+h2 {
+  margin-top: 0;
+}
+@media (min-width: 900px) {
+  h2 {
     font-size: 2rem;
   }
 }
@@ -455,6 +466,94 @@ p {
   }
 }
 
+.product-card {
+  background: white;
+  min-width: 120px;
+  max-width: 120px;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+}
+.product-card__img-container {
+  min-height: 100px;
+}
+@media (min-width: 600px) {
+  .product-card__img-container {
+    min-height: 150px;
+  }
+}
+@media (min-width: 900px) {
+  .product-card__img-container {
+    min-height: 200px;
+  }
+}
+.product-card__content {
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+.product-card__content p {
+  margin-bottom: 0;
+}
+.product-card__content div:first-child p {
+  margin-bottom: 8px;
+}
+.product-card__content__title {
+  font-weight: 600;
+}
+@media (min-width: 600px) {
+  .product-card__content__title {
+    font-size: 1.3rem;
+  }
+}
+@media (min-width: 900px) {
+  .product-card__content__title {
+    font-size: 1.5rem;
+  }
+}
+.product-card__content__description {
+  font-size: 0.75rem;
+}
+@media (min-width: 600px) {
+  .product-card__content__description {
+    font-size: 1rem;
+  }
+}
+.product-card__content__price {
+  font-weight: 600;
+}
+@media (min-width: 600px) {
+  .product-card__content__price {
+    font-size: 1.3rem;
+  }
+}
+@media (min-width: 900px) {
+  .product-card__content__price {
+    font-size: 1.5rem;
+  }
+}
+@media (min-width: 600px) {
+  .product-card__content {
+    padding: 16px;
+  }
+}
+@media (min-width: 600px) {
+  .product-card {
+    min-width: 200px;
+    max-width: 200px;
+    min-height: 290px;
+  }
+}
+@media (min-width: 900px) {
+  .product-card {
+    min-width: 250px;
+    max-width: 250px;
+    min-height: 350px;
+  }
+}
+
 .tabbar {
   position: fixed;
   left: 0;
@@ -477,7 +576,7 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: 12px;
+  font-size: 0.75rem;
   padding: 12px 16px;
 }
 .tabbar ul li a svg {
@@ -975,6 +1074,26 @@ p {
     display: flex;
     min-height: 500px;
   }
+}
+
+.last-products {
+  display: flex;
+  justify-content: center;
+}
+.last-products .container {
+  padding: 24px 16px;
+  flex-direction: column;
+}
+@media (min-width: 600px) {
+  .last-products .container {
+    padding: 42px 24px;
+  }
+}
+.last-products ul {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: scroll;
+  gap: 16px;
 }
 
 /*------ THEMES ------*/
