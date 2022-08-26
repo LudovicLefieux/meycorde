@@ -32,4 +32,5 @@ add_theme_support( 'title-tag' );
 register_nav_menus( array(
 	'main' => 'Menu principal',
     'account' => 'Menu utilisateur',
+    'footer' => 'Liens obligatoires',
 ) );

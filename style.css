@@ -378,6 +378,7 @@ body > * .container {
   width: 100%;
   max-width: 1200px;
   display: flex;
+  flex-direction: column;
 }
 @media (min-width: 600px) {
   body {
@@ -388,9 +389,16 @@ body > * .container {
 a {
   text-decoration: none;
   color: inherit;
+  line-height: 1.5;
+  transition: color 0.2s ease;
 }
 a:hover {
   color: #0aac8c;
+}
+@media (min-width: 900px) {
+  a {
+    font-size: 1.25rem;
+  }
 }
 
 ul {
@@ -433,6 +441,7 @@ h2 {
 
 p {
   margin-top: 0;
+  line-height: 1.5;
 }
 @media (min-width: 900px) {
   p {
@@ -1019,6 +1028,7 @@ p {
 }
 .header .container {
   padding: 24px 16px;
+  flex-direction: row;
   justify-content: flex-end;
 }
 .header .container .logo {
@@ -1100,6 +1110,47 @@ p {
   .left-right {
     display: flex;
     min-height: 500px;
+  }
+}
+
+.footer {
+  border-top: solid 1px #dadada;
+}
+.footer .container {
+  padding: 16px;
+}
+@media (min-width: 600px) {
+  .footer .container {
+    padding: 24px;
+  }
+}
+@media (min-width: 900px) {
+  .footer .container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+@media (min-width: 900px) {
+  .footer .copyright {
+    margin: 0;
+  }
+}
+@media (min-width: 900px) {
+  .footer .links ul {
+    display: flex;
+    gap: 16px;
+  }
+}
+.footer .links ul a {
+  color: #0aac8c;
+}
+.footer .links ul a:hover {
+  color: #086956;
+}
+@media (min-width: 900px) {
+  .footer {
+    display: flex;
+    justify-content: center;
   }
 }
 

@@ -1,0 +1,44 @@
+.footer {
+  border-top: solid 1px $grey;
+
+  .container {
+    padding: 16px;
+
+    @media (min-width: 600px) {
+      padding: 24px;
+    }
+
+    @media (min-width: 900px) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  .copyright {
+    @media (min-width: 900px) {
+      margin: 0;
+    }
+  }
+
+  .links {
+    ul {
+      @media (min-width: 900px) {
+        display: flex;
+        gap: 16px;
+      }
+
+      a {
+        color: $interactive;
+
+        &:hover {
+          color: $dark-interactive;
+        }
+      }
+    }
+  }
+
+  @media (min-width: 900px) {
+    display: flex;
+    justify-content: center;
+  }
+}
