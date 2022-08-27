@@ -560,7 +560,7 @@ p {
   transition: all 0.2s ease;
 }
 .seemore-card a:hover {
-  background: #0aac8c;
+  background: rgba(10, 172, 140, 0.8);
   color: #efefef;
 }
 @media (min-width: 600px) {
