@@ -586,8 +586,19 @@ p {
 .product-card a:hover {
   color: inherit;
 }
+.product-card a:hover img {
+  transform: scale(1.2);
+}
 .product-card__img-container {
   min-height: 100px;
+  overflow: hidden;
+  background: white;
+}
+.product-card__img-container img {
+  width: 100%;
+  height: auto;
+  max-height: fit-content;
+  transition: transform 0.2s ease;
 }
 @media (min-width: 600px) {
   .product-card__img-container {

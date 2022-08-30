@@ -49,86 +49,24 @@
     <div class="container">
         <h2>Les nouveautés</h2>
         <ul>
-            <li class="last-product__item product-card">
-                <a href="#">
-                    <div class="product-card__img-container">
 
-                    </div>
-                    <div class="product-card__content">
-                        <div>
-                            <p class="product-card__content__title">Paracord OD</p>
-                            <p class="product-card__content__description">Bracelet de survie</p>
-                        </div>
-                        <div>
-                            <p class="product-card__content__price">7.50€</p>
-                        </div>
-                    </div>
-                </a>
-            </li>
-            <li class="last-product__item product-card">
-                <a href="#">
-                    <div class="product-card__img-container">
-
-                    </div>
-                    <div class="product-card__content">
-                        <div>
-                            <p class="product-card__content__title">Paracord OD</p>
-                            <p class="product-card__content__description">Bracelet de survie</p>
-                        </div>
-                        <div>
-                            <p class="product-card__content__price">7.50€</p>
-                        </div>
-                    </div>
-                </a>
-            </li>
-            <li class="last-product__item product-card">
-                <a href="#">
-                    <div class="product-card__img-container">
-
-                    </div>
-                    <div class="product-card__content">
-                        <div>
-                            <p class="product-card__content__title">Paracord OD</p>
-                            <p class="product-card__content__description">Bracelet de survie</p>
-                        </div>
-                        <div>
-                            <p class="product-card__content__price">7.50€</p>
-                        </div>
-                    </div>
-                </a>
-            </li>
-            <li class="last-product__item product-card">
-                <a href="#">
-                    <div class="product-card__img-container">
-
-                    </div>
-                    <div class="product-card__content">
-                        <div>
-                            <p class="product-card__content__title">Paracord OD</p>
-                            <p class="product-card__content__description">Bracelet de survie</p>
-                        </div>
-                        <div>
-                            <p class="product-card__content__price">7.50€</p>
-                        </div>
-                    </div>
-                </a>
-            </li>
-            <li class="last-product__item product-card">
-                <a href="#">
-                    <div class="product-card__img-container">
-
-                    </div>
-                    <div class="product-card__content">
-                        <div>
-                            <p class="product-card__content__title">Paracord OD</p>
-                            <p class="product-card__content__description">Bracelet de survie</p>
-                        </div>
-                        <div>
-                            <p class="product-card__content__price">7.50€</p>
-                        </div>
-                    </div>
-                </a>
-            </li>
+            <?php
+                $args = array(
+                    'post_type' => 'product',
+                    'posts_per_page' => 5
+                    );
+                $loop = new WP_Query( $args );
+                if ( $loop->have_posts() ) {
+                    while ( $loop->have_posts() ) : 
+                        $loop->the_post();
+                        wc_get_template_part( 'content', 'product' );
+                    endwhile;
+                } else {
+                    echo __( 'Pas de produit dans la boutique pour le moment' );
+                }
+                wp_reset_postdata();
+            ?>
+            
         </ul>
     </div>
 </section>
@@ -136,6 +74,17 @@
 <section class="home-categories">
     <div class="container">
         <h2>Vous choisissez</h2>
+
+        <?php $args = array('post_type' => 'page', 'pagename' => 'home-categories');
+        $posts = get_posts($args);
+
+        if(count($posts) > 0):
+            $post = $posts[0];
+            setup_postdata($post); ?>
+
+            <?php the_content(); ?>
+        <?php endif; wp_reset_postdata(); ?>
+
         <div class="home-categories__grid">
             <div class="category-card">
                 <a href="#">
