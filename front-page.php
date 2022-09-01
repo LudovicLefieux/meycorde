@@ -75,14 +75,18 @@
     <div class="container">
         <h2>Vous choisissez</h2>
 
-        <?php $args = array('post_type' => 'page', 'pagename' => 'home-categories');
-        $posts = get_posts($args);
+        <?php 
+            $args = array(
+                'post_type' => 'product_cat',
+                'posts_per_page' => 3
+            );
+            $posts = get_posts($args);
 
-        if(count($posts) > 0):
-            $post = $posts[0];
-            setup_postdata($post); ?>
+            if(count($posts) > 0):
+                $post = $posts[0];
+                setup_postdata($post); ?>
 
-            <?php the_content(); ?>
+                <?php the_content(); ?>
         <?php endif; wp_reset_postdata(); ?>
 
         <div class="home-categories__grid">

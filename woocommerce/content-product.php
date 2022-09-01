@@ -34,7 +34,7 @@ if ( empty( $product ) || ! $product->is_visible() ) {
         <div class="product-card__content">
             <div>
                 <p class="product-card__content__title"><?php the_title(); ?></p>
-                <div class="product-card__content__description"><?php displayTags() ?></div>
+                <div class="product-card__content__description"><?php meycorde_woocommerce_display_product_categories() ?></div>
             </div>
             <div>
 				<?php if( $price_html = $product->get_price_html() ): ?>

@@ -20,6 +20,17 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 ?>
 
+<div class="category-card">
+    <a href="<?php the_permalink(); ?>">
+        <div class="category-card__img-container">
+			<?php the_post_thumbnail(); ?>
+		</div>
+    	<div class="category-card__content">
+            <span class="category-card__title"><?php the_title(); ?></span>
+        </div>
+    </a>            
+</div>
+
 <li <?php wc_product_cat_class( '', $category ); ?>>
 	<?php
 	/**

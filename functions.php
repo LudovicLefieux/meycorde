@@ -54,13 +54,13 @@ function meycorde_add_woocommerce_support() {
 add_action( 'after_setup_theme', 'meycorde_add_woocommerce_support' );
 
 // Affiche les étiquettes produits
-function displayTags() {
+function meycorde_woocommerce_display_product_categories() {
  
     // This will hold all of our product tags
-    $tags = array();
+    $categories = array();
  
     // get an array of the WP_Term objects for a defined product ID (get_the_id() will return the product id of the current object)
-    $terms = wp_get_post_terms( get_the_id(), 'product_tag' );
+    $terms = wp_get_post_terms( get_the_id(), 'product_cat' );
  
     // Loop through each product tag for the current product
     if ( count( $terms ) > 0 ) {
@@ -70,15 +70,15 @@ function displayTags() {
             $term_name = $term->name;
  
             // Set the product tag names in an array
-            $tags[] = '<span>' . $term_name . '</span>';
+            $categories[] = '<span>' . $term_name . '</span>';
  
         }
  
         // Combine all of the product tags into one string for output
-        $tags = implode( '', $tags );
+        $categories = implode( '', $categories );
  
         // Output
-        echo $tags;
+        echo $categories;
     }
  
 }
